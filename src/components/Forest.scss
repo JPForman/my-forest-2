@@ -20,6 +20,18 @@
     z-index: 1;
     top: 10%;
   }
+  .flower-set {
+    position: fixed;
+    top: 35%;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+  .tree-set {
+    top: 35%;
+    width: 100%;
+    height: 100%;
+  }
   .ground {
     background-color: $ground_green;
     top: 35%;
@@ -121,7 +133,6 @@
           }
         }
       }
-
-      }
+    }
   }
 }
