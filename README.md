@@ -12,10 +12,12 @@
 #### or go to https://myforest-4ec7f.web.app/ to see it live
 
 ## Issues
+- needs login w/ auth
 - give editing & deleting capabilities to events
 - add key section
 - connect color of sky and background color to 
 - needs a mobile build...maybe just a way to add an event
+- needs some minor db stuff to hold everyone's everything, nbd
 
 ## Bugs
 - needs some styling for event details around sides of the screen, unable to read/see
