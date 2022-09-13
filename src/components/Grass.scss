@@ -1,4 +1,26 @@
-.grass {
-  width: 65px;
+.grass-container {
   position: absolute;
+  z-index: 6;
+  .details {
+    transition: all .33s ease-in-out;
+    background-color: antiquewhite;
+    padding: 10px 50px;
+    width: 250px;
+    display: flex;
+    transform: translate(-35%, -10px);
+    flex-wrap: wrap;
+    &.on {
+      opacity: 1;
+      display: flex;
+    }
+    &.off {
+      opacity: 0;
+      display: hidden;
+    }
+  }
+  .grass {
+    width: 65px;
+    position: absolute;
+    cursor: pointer;
+  }
 }

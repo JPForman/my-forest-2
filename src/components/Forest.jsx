@@ -10,6 +10,7 @@ const Forest = () => {
   const [showDetails, setShowDetails] = React.useState(false)
   const [newEvent, setNewEvent] = React.useState({ date: '', types: { active: false } })
   const [masterEventList, setMasterEventList] = React.useState([])
+  const [showTitle, setShowTitle] = React.useState(true)
 
   const setDate = (event) => {
     const newDate = event
@@ -40,15 +41,15 @@ const Forest = () => {
       if(chosenEvent === 'tree') {
         // set tree location
         randLeft = Math.floor((Math.random() * 85) + 15)
-        randBottom = Math.floor((Math.random() * 55) + 15)
+        randBottom = Math.floor((Math.random() * 64) - 11)
       } else if (chosenEvent === 'flower') {
         // set flower location
         randLeft = Math.floor(Math.random() * 95)
         randBottom = Math.floor((Math.random() * 59) + 36)
       } else if (chosenEvent === 'grass') {
         // set grass location
-        randLeft = Math.floor(Math.random() * 95)
-        randBottom = Math.floor((Math.random() * 59) + 36)
+        randLeft = Math.floor(Math.random() * 90)
+        randBottom = Math.floor((Math.random() * 60) + 46)
       }
       setNewEvent(prevState => ({
         ...prevState,
@@ -95,8 +96,6 @@ const Forest = () => {
     closeCalendar()
   }
 
-  console.dir(masterEventList);
-
   return (
     <div className='sky'>
       <div className='flower-set'>
@@ -114,8 +113,11 @@ const Forest = () => {
       </div>
       <div className='sun'></div>
       <div className='ground'></div>
+      <div onClick={() => setShowTitle(!showTitle)} className='title-clicker'></div>
+      {showTitle && <span className='title'>myForest</span>}
       {showCalendarInput && <div className='close-date' onClick={() => closeCalendar()}></div>}
-      <div className='rock' onClick={() => setShowCalendarInput(true)}></div>
+      <div className='rock' onClick={() => setShowCalendarInput(!showCalendarInput)}></div>
+      <div className='rock-clicker' onClick={() => setShowCalendarInput(!showCalendarInput)}></div>
       {showCalendarInput && (
         <div className='event-container'>
           {!showDetails && (

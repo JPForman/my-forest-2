@@ -1,6 +1,26 @@
 .tree {
   position: absolute;
-  z-index: 5;
+  z-index: 7;
+  width: 130px;
+  height: 500px;
+  cursor: pointer;
+  .details {
+    transition: all .33s ease-in-out;
+    background-color: antiquewhite;
+    padding: 10px 50px;
+    width: 250px;
+    display: flex;
+    transform: translate(-25%, 30px);
+    flex-wrap: wrap;
+    &.on {
+      opacity: 1;
+      display: flex;
+    }
+    &.off {
+      opacity: 0;
+      display: hidden;
+    }
+  }
 }
 .treeLeaves {
   height:150px;
