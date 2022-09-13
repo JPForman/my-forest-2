@@ -7,5 +7,11 @@
 - $npm install
 - $npm start
 
+## Issues
+- give editing & deleting capabilities to events
+- add key section
+- connect color of sky and background color to 
+- needs a mobile build...maybe just a way to add an event
+
 ## Bugs
-- maybe a few, check the issues
+- needs some styling for event details around sides of the screen, unable to read/see
