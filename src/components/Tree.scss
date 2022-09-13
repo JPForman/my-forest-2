@@ -10,6 +10,7 @@
     padding: 10px 50px;
     width: 250px;
     display: flex;
+    flex-direction: column;
     transform: translate(-25%, 30px);
     flex-wrap: wrap;
     &.on {

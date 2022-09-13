@@ -53,21 +53,20 @@ const Forest = () => {
       }
       setNewEvent(prevState => ({
         ...prevState,
+        date: newEvent.date,
         types: {
           ...newEvent.types,
           [chosenEvent]: {
             active: true,
             left: randLeft,
-            bottom: randBottom
+            bottom: randBottom,
           }
         }
       }))
     }
-    console.log('newEvent', newEvent);
   }
 
   const noteHandler = (type, note) => {
-    console.log(note);
     setNewEvent(prevState => ({
       ...prevState,
       types: {
@@ -102,15 +101,15 @@ const Forest = () => {
       <div className='cloud-2'></div>
       <div className='flower-set'>
         {masterEventList.map((grassEvent, i) => (
-          (grassEvent.types.grass && <Grass key={i} grassEvent={grassEvent.types.grass} />)
+          (grassEvent.types.grass && <Grass key={i} grassEvent={grassEvent.types.grass} date={grassEvent.date} />)
         ))}
         {masterEventList.map((flowerEvent, i) => (
-          (flowerEvent.types.flower && <Flower key={i} flowerEvent={flowerEvent.types.flower} />)
+          (flowerEvent.types.flower && <Flower key={i} flowerEvent={flowerEvent.types.flower} date={flowerEvent.date} />)
         ))}
       </div>
       <div className='tree-set'>
         {masterEventList.map((treeEvent, i) => (
-          (treeEvent.types.tree && <Tree key={i} treeEvent={treeEvent.types.tree} />)
+          (treeEvent.types.tree && <Tree key={i} treeEvent={treeEvent.types.tree} date={treeEvent.date} />)
         ))}
       </div>
       <div className='sun'></div>

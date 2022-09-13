@@ -3,13 +3,18 @@ import GrassImg from '../assets/images/grass.png'
 
 import './Grass.scss'
 
-const Grass = ({ grassEvent }) => {
+const Grass = ({ grassEvent, date }) => {
   const [showDetails, setShowDetails] = React.useState(false)
 
   return (
     <div className="grass-container" style={{left: `${grassEvent.left}%`, bottom: `${grassEvent.bottom}%`}}>
-      <span className={`details ${showDetails ? 'on' : 'off'}`} style={{transform: 'translate(-35%, -10px)'}}>{grassEvent.note}</span>
-      <img src={GrassImg} alt="grass" className='grass' onClick={() => setShowDetails(!showDetails)} />
+      <div className={`details ${showDetails ? 'on' : 'off'}`} style={{transform: 'translate(-35%, -10px)'}}>
+        <span className='note'>{grassEvent.note}</span>
+        <span className='date'>{date}</span>
+      </div>
+      <div  onClick={() => setShowDetails(!showDetails)}>
+        <img src={GrassImg} alt="grass" className='grass' onClick={() => setShowDetails(!showDetails)} />
+      </div>
     </div>
   )
 }
