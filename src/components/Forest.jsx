@@ -98,6 +98,8 @@ const Forest = () => {
 
   return (
     <div className='sky'>
+      <div className='cloud-1'></div>
+      <div className='cloud-2'></div>
       <div className='flower-set'>
         {masterEventList.map((grassEvent, i) => (
           (grassEvent.types.grass && <Grass key={i} grassEvent={grassEvent.types.grass} />)
