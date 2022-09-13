@@ -1,11 +1,15 @@
+![myForest logo](./src/assets/images/titleImg.png)
 # My Forest
 ### by Joshua Forman
 
-#### This is a personal habit tracker I created.
+
+#### This is a personal habit tracker I created. It seems like a cute idea to think of your life events as a forest.
 
 ## To Run After Cloning
 - $npm install
 - $npm start
+
+#### or go to https://myforest-4ec7f.web.app/ to see it live
 
 ## Issues
 - give editing & deleting capabilities to events
